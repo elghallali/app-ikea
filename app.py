@@ -66,22 +66,22 @@ with st.container():
         fig = ff.create_table(team, height_constant=60, colorscale=[[0, '#e5989b'],[.5, '#ffddd2'],[1, '#ffffff']])
         fig.update_layout(font=dict(size=30))
         st.plotly_chart(fig, use_container_width=True)
-    st.header('Description')
+    #st.header('Description')
 
 
-    st.markdown("""
-                <footer>
-                <h2 class="centered-header">Realised by slaoui rabia</h2>
-                </footer>
-                """, unsafe_allow_html=True)
+    #st.markdown("""
+                #<footer>
+                #<h2 class="centered-header">Realised by slaoui rabia</h2>
+                #</footer>
+                #""", unsafe_allow_html=True)
     # pour etre tjrs sur le footer
 
-    df = pd.read_csv(os.getcwd() + '/data/ikea.csv')
-    st.dataframe(df)
+    #df = pd.read_csv(os.getcwd() + '/data/ikea.csv')
+    #st.dataframe(df)
     
 # test load
 
-data_load=st.button('data load')
-if data_load:
-    Loads(factTable(df),'data/','ikeaLoad.csv').send_to_csv()
+#data_load=st.button('data load')
+#if data_load:
+    #Loads(factTable(df),'data/','ikeaLoad.csv').send_to_csv()
 

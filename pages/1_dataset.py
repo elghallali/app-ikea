@@ -19,8 +19,7 @@ st.set_page_config(
     page_icon=logo,
     layout='wide'
 )
-
-st.markdown(f'# <img src="https://raw.githubusercontent.com/RabiaaSL00/app-ikea/main/images/logo%20ikea.webp" alt="Ikea Logo" width=100/> Ikea Dataset',unsafe_allow_html=True)
+st.markdown('# <img src="https://raw.githubusercontent.com/IssamELMEHDI/Application-using-streamlit-Ikea-case/master/images/ikea%20logo.png" alt="Ikea Logo" width=100/> Dataset',unsafe_allow_html=True)
 st.markdown('<style> div.block-container {padding-top: 0.1rem;}</style>',unsafe_allow_html=True)
 hide_st_style = """
             <style>

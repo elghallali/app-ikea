@@ -46,14 +46,9 @@ def pie(df,category):
     st.altair_chart(c,use_container_width=True)
 '''
 
-def pie(df,nominal,quantitative):
-    c=(alt.Chart(df).mark_arc(outerRadius=80).encode(
-    alt.Theta(f'{quantitative}:Q').scale(range=[2.356, 8.639]),
-    alt.Color(f'{nominal}:N')
-        .title(None)
-        .legend(orient='none', legendX=460, legendY=0),
-    order=f'{quantitative}:Q'
-    ).configure_view(
-    strokeOpacity=0
-    ))
-    st.altair_chart(c,use_container_width=True)
+def pie(df,values,names):
+    fig = px.pie(df, values=values, names=names)
+    fig.update_traces(textposition='inside')
+    fig.update_layout(uniformtext_minsize=12, uniformtext_mode='hide')
+    
+    st.plotly_chart(fig,use_container_width=True, height=800)
